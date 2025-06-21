@@ -1,0 +1,3 @@
+Provider_Number char(1024),Hospital_Name char(1024),City char(1024),State char(1024),ZIP_Code char(1024),County_Name char(1024),Phone_Number char(1024),Hospital_Type char(1024),Hospital_Owner char(1024),Emergency_Service char(1024),Condition char(1024),Measure_Code char(1024),Measure_Name char(1024),Sample char(1024),StateAvg char(1024)
+2,605, select r1.__id,r2.__id from r as r1 join r as r2 on r1.__id < r2.__id and r1.Phone Number == r2.Phone Number
+2,659, select r1.__id,r2.__id from r as r1 join r as r2 on r1.__id < r2.__id and r1.ZIP_Code == r2.ZIP_Code

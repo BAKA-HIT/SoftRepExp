@@ -1,0 +1,3 @@
+Provider_Number char(1024),Hospital_Name char(1024),City char(1024),State char(1024),ZIP_Code char(1024),County_Name char(1024),Phone_Number char(1024),Hospital_Type char(1024),Hospital_Owner char(1024),Emergency_Service char(1024),Condition char(1024),Measure_Code char(1024),Measure_Name char(1024),Sample char(1024),StateAvg char(1024)
+2,283, select r1.__id,r2.__id from r as r1 join r as r2 on r1.__id < r2.__id and r1.Hospital_Owner <> r2.Hospital_Owner and r1.Condition == r2.Condition and r1.Sample == r2.Sample
+2, inf, select r1.__id,r2.__id from r as r1 join r as r2 on r1.__id < r2.__id and r1.Hospital_Type <> r2.Hospital_Type and r1.Hospital_Owner <> r2.Hospital_Owner and r1.Emergency_Service == r2.Emergency_Service and r1.Measure_Code == r2.Measure_Code

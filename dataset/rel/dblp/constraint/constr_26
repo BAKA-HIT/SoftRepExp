@@ -1,0 +1,4 @@
+title char(1024),author char(1024),year int,booktitle char(1024),pages char(1024),ee char(1024),url char(1024)
+2, 424 , select r1.__id,r2.__id from r as r1 join r as r2 on r1.pages == r2.pages and r1.booktitle != r2.booktitle and r1.__id < r2.__id;
+2, 2, select r1.__id,r2.__id from r as r1 join r as r2 on r1.year == r2.year and r1.booktitle == r2.booktitle and r1.pages == r2.pages and (r1.url != r2.url or r1.title != r2.title or r1.ee != r2.ee) and r1.__id < r2.__id;
+2, 323, select r1.__id,r2.__id from r as r1 join r as r2 on r1.ee == r2.ee and r1.url != r2.url and r1.__id < r2.__id;

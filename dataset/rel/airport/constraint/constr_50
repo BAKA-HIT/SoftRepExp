@@ -1,0 +1,7 @@
+ident char(1024),type char(1024),name char(1024),elevation_ft int,continent char(1024),iso_country char(1024),iso_region char(1024),municipality char(1024),gps_code char(1024),local_code char(1024),coordinates char(1024)
+2,inf,select r1.__id,r2.__id from r as r1 join r as r2 on r1.__id < r2.__id and r1.type == r2.type and r1.municipality == r2.municipality;
+2,400,select r1.__id,r2.__id from r as r1 join r as r2 on r1.__id < r2.__id and r1.continent == r2.continent and r1.iso_region <> r2.iso_region and r1.municipality <> r2.municipality and r1.gps_code == r2.gps_code and r1.gps_code == r2.local_code;
+2,73,select r1.__id,r2.__id from r as r1 join r as r2 on r1.__id < r2.__id and r1.elevation_ft == r2.elevation_ft and r1.gps_code == r2.gps_code;
+2,inf,select r1.__id,r2.__id from r as r1 join r as r2 on r1.__id < r2.__id and r1.type == r2.type and r1.elevation_ft > r2.elevation_ft and r1.gps_code == r2.gps_code and r1.gps_code == r2.local_code;
+2,inf,select r1.__id,r2.__id from r as r1 join r as r2 on r1.__id < r2.__id and r1.continent == r2.continent and r1.gps_code <> r2.gps_code and r1.gps_code == r2.local_code and r1.local_code == r2.local_code;
+2,581,select r1.__id,r2.__id from r as r1 join r as r2 on r1.__id < r2.__id and r1.iso_country == r2.iso_country and r1.gps_code == r2.local_code;

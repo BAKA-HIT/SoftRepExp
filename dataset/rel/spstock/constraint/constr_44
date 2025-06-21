@@ -1,0 +1,2 @@
+Date char(1024),Ticker char(1024),Open double,High double,Low double,Close double,Volume int
+2,756, select r1.__id,r2.__id from r as r1 join r as r2 on r1.__id < r2.__id and r1.Date <> r2.Date and r1.Open <= r2.High and r1.Open <> r2.Close and r1.High <> r2.High and r1.High >= r2.Low and r1.Low <= r2.Low
